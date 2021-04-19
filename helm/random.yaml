@@ -10,8 +10,8 @@ image:
   tag: "latest"
 
 env:
-  interval: 60 # Interval between random logs gernerating (In seconds), set value to "random" for a random interval (1-120 seconds) every time
-  count: 25 # Number of logs to generate each time, set value to "random" for a random logs count (1-50) every time
+  interval: random # Interval between random logs gernerating (In seconds), set value to "random" for a random interval every time
+  count: random # Number of logs to generate each time, set value to "random" for a random logs count every time
   maxNum: 50 # Maximum number to be generated for the logs themselves
 
 podAnnotations: {}
