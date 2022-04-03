@@ -1,0 +1,9 @@
+FROM jenkins/jenkins:lts
+USER root
+RUN apt-get update \
+      && apt-get install -y sudo \
+      && curl -fsSL https://get.docker.com -o get-docker.sh \ 
+      && sh get-docker.sh \
+      && apt -y install docker-compose
+RUN echo "jenkins ALL=NOPASSWD: ALL" >> /etc/sudoers
+RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && unzip awscliv2.zip && ./aws/install
